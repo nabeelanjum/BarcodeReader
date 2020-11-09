@@ -4,8 +4,8 @@ import {
   Text as RNText,
 } from 'react-native';
 import colors from '../utils/colors';
-import {isAndroid} from '../utils/constants';
-import {normalizeFont} from '../utils/functions';
+import { isAndroid } from '../utils/constants';
+import { normalizeFont } from '../utils/functions';
 
 const Text = ({ center, right, style, bold, size, bolder, boldest, color, children }) => {
   return (
@@ -18,8 +18,8 @@ const Text = ({ center, right, style, bold, size, bolder, boldest, color, childr
         bold && styles.bold,
         bolder && styles.bolder,
         boldest && styles.boldest,
-        size && {fontSize: normalizeFont(size)},
-        color && {color},
+        size && { fontSize: normalizeFont(size, true) },
+        color && { color },
         style
       ]}>
       {children}
