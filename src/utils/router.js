@@ -4,14 +4,24 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 // Screens //
 import Home from '../screens/Home';
+import ProductDetails from '../screens/ProductDetails';
 
 const Stack = createStackNavigator();
 
 const StackNavigator = () => (
-  <Stack.Navigator>
+  <Stack.Navigator
+    initialRouteName='ProductDetails'
+  // screenOptions={{
+  //   headerShown: false
+  // }}
+  >
     <Stack.Screen
       name='Home'
       component={Home}
+    />
+    <Stack.Screen
+      name='ProductDetails'
+      component={ProductDetails}
     />
   </Stack.Navigator>
 );
