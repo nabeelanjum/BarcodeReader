@@ -9,19 +9,20 @@ import ProductDetails from '../screens/ProductDetails';
 const Stack = createStackNavigator();
 
 const StackNavigator = () => (
-  <Stack.Navigator
-    initialRouteName='ProductDetails'
-  // screenOptions={{
-  //   headerShown: false
-  // }}
-  >
+  <Stack.Navigator>
     <Stack.Screen
       name='Home'
       component={Home}
+      options={{
+        title: 'Scan Barcode'
+      }}
     />
     <Stack.Screen
       name='ProductDetails'
       component={ProductDetails}
+      options={{
+        title: 'Product Details'
+      }}
     />
   </Stack.Navigator>
 );
