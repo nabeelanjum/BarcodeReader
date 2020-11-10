@@ -7,9 +7,11 @@ import colors from '../utils/colors';
 import { isAndroid } from '../utils/constants';
 import { normalizeFont } from '../utils/functions';
 
-const Text = ({ center, right, style, bold, size, bolder, boldest, color, children }) => {
+const Text = (props) => {
+  const { center, right, style, bold, size, bolder, boldest, color, children } = props;
   return (
     <RNText
+      {...props}
       allowFontScaling={false}
       style={[
         styles.text,

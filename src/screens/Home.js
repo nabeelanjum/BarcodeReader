@@ -7,7 +7,7 @@ import QRCodeScanner from 'react-native-qrcode-scanner';
 import { normalizeX } from '../utils/functions';
 import { invokeAPI } from '../networking';
 
-const Home = () => {
+const Home = ({ navigation }) => {
 
   const getCameraPermission = async () => {
 
@@ -29,7 +29,9 @@ const Home = () => {
 
   const onSuccess = async (product) => {
     const resp = await invokeAPI(product.data);
-    console.log(resp);
+    if (resp) {
+      navigation.navigate('ProductDetails', { details: resp.products[0] });
+    }
   }
 
   const notAuthorizedView = (
