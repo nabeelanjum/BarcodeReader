@@ -18,13 +18,13 @@ export async function invokeAPI(productCode) {
       headers
     });
     console.log('RESPONSE:', resp);
+
     const response = await handleResponse(resp);
     return response;
+
   } catch (error) {
-    console.log(error);
     Alert.alert('Oops', `Something went wrong, ${error}`);
     console.log('In catch block:', error);
-    return false;
   }
 }
 

@@ -37,8 +37,8 @@
 			</dict>
 		</dict>
 	</dict>
-  <key>NSCameraUsageDescription</key>
-  <string>Permission to access your camera is needed to scan the barcode</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Permission to access your camera is needed to scan the barcode</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
